@@ -1,0 +1,17 @@
+# baseURI: urn:x-evn-master:mitre_att_ck
+# imports: http://datashapes.org/graphql
+
+@base          <urn:x-evn-master:mitre_att_ck> .
+@prefix metadata: <http://topbraid.org/metadata#> .
+@prefix teamwork: <http://topbraid.org/teamwork#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<urn:x-evn-master:mitre_att_ck>
+        <http://topbraid.org/swa#defaultNamespace>  "https://www.industrialsemantics.com/ontologies/MITRE_Att%40ck#" ;
+        rdfs:label       "MITRE Att@ck" ;
+        rdf:type         owl:Ontology ;
+        owl:imports      <http://datashapes.org/graphql> ;
+        metadata:status  metadata:UnderDevelopmentStatus .

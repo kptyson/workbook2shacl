@@ -1,0 +1,857 @@
+@prefix metadata: <http://topbraid.org/metadata#> .
+@prefix ns1: <http://www.w3.org/ns/shacl#> .
+@prefix ns2: <http://topbraid.org/swa#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#campaigns> a owl:Class,
+        ns1:NodeShape ;
+    rdfs:label "campaigns" ;
+    rdfs:comment "Harvested from enterprise-attack-v12.1.xlsx:campaigns" ;
+    rdfs:subClassOf <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#enterprise.attack.v12.1.xlsx> ;
+    ns1:property <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#campaigns-ID>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#campaigns-associated.campaigns>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#campaigns-associated.campaigns.citations>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#campaigns-contributors>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#campaigns-created>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#campaigns-description>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#campaigns-last.modified>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#campaigns-name>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#campaigns-relationship.citations>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#campaigns-url>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#campaigns-version> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#citations> a owl:Class,
+        ns1:NodeShape ;
+    rdfs:label "citations" ;
+    rdfs:comment "Harvested from enterprise-attack-v12.1.xlsx:citations" ;
+    rdfs:subClassOf <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#enterprise.attack.v12.1.xlsx> ;
+    ns1:property <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#citations-citation>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#citations-reference>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#citations-url> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#datasources> a owl:Class,
+        ns1:NodeShape ;
+    rdfs:label "datasources" ;
+    rdfs:comment "Harvested from enterprise-attack-v12.1.xlsx:datasources" ;
+    rdfs:subClassOf <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#enterprise.attack.v12.1.xlsx> ;
+    ns1:property <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#datasources-ID>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#datasources-collection.layers>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#datasources-contributors>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#datasources-created>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#datasources-description>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#datasources-modified>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#datasources-name>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#datasources-platforms>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#datasources-type>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#datasources-url>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#datasources-version> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#groups> a owl:Class,
+        ns1:NodeShape ;
+    rdfs:label "groups" ;
+    rdfs:comment "Harvested from enterprise-attack-v12.1.xlsx:groups" ;
+    rdfs:subClassOf <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#enterprise.attack.v12.1.xlsx> ;
+    ns1:property <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#groups-ID>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#groups-associated.groups>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#groups-associated.groups.citations>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#groups-contributors>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#groups-created>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#groups-description>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#groups-last.modified>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#groups-name>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#groups-relationship.citations>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#groups-url>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#groups-version> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#mitigations> a owl:Class,
+        ns1:NodeShape ;
+    rdfs:label "mitigations" ;
+    rdfs:comment "Harvested from enterprise-attack-v12.1.xlsx:mitigations" ;
+    rdfs:subClassOf <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#enterprise.attack.v12.1.xlsx> ;
+    ns1:property <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#mitigations-ID>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#mitigations-created>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#mitigations-description>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#mitigations-last.modified>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#mitigations-name>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#mitigations-relationship.citations>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#mitigations-url>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#mitigations-version> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#relationships> a owl:Class,
+        ns1:NodeShape ;
+    rdfs:label "relationships" ;
+    rdfs:comment "Harvested from enterprise-attack-v12.1.xlsx:relationships" ;
+    rdfs:subClassOf <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#enterprise.attack.v12.1.xlsx> ;
+    ns1:property <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#relationships-mapping.description>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#relationships-mapping.type>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#relationships-source.ID>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#relationships-source.name>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#relationships-source.type>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#relationships-target.ID>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#relationships-target.name>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#relationships-target.type> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#software> a owl:Class,
+        ns1:NodeShape ;
+    rdfs:label "software" ;
+    rdfs:comment "Harvested from enterprise-attack-v12.1.xlsx:software" ;
+    rdfs:subClassOf <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#enterprise.attack.v12.1.xlsx> ;
+    ns1:property <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#software-ID>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#software-aliases>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#software-contributors>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#software-created>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#software-description>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#software-last.modified>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#software-name>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#software-platforms>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#software-relationship.citations>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#software-type>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#software-url>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#software-version> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques> a owl:Class,
+        ns1:NodeShape ;
+    rdfs:label "techniques" ;
+    rdfs:comment "Harvested from enterprise-attack-v12.1.xlsx:techniques" ;
+    rdfs:subClassOf <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#enterprise.attack.v12.1.xlsx> ;
+    ns1:property <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques-CAPEC.ID>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques-ID>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques-contributors>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques-created>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques-data.sources>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques-defenses.bypassed>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques-description>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques-detection>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques-effective.permissions>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques-impact.type>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques-is.sub.technique>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques-last.modified>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques-name>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques-permissions.required>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques-platforms>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques-relationship.citations>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques-sub.technique.of>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques-supports.remote>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques-system.requirements>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques-tactics>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques-url>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques-version> .
+
+<urn:x-evn-master:att_ck_ontology> a owl:Ontology ;
+    rdfs:label "ATT&CK Ontology" ;
+    metadata:status metadata:UnderDevelopmentStatus ;
+    ns2:defaultNamespace "https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#" ;
+    rdfs:comment """Derived from ATT&CK in Excel
+Excel spreadsheets representing the ATT&CK dataset.
+https://attack.mitre.org/docs/enterprise-attack-v12.1/enterprise-attack-v12.1.xlsx
+""" ;
+    owl:imports <http://datashapes.org/graphql> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#campaigns-ID> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:campaigns:ID" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#campaigns.Property.Group> ;
+    ns1:name "ID" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#ID> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#campaigns-associated.campaigns> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:campaigns:associated campaigns" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#campaigns.Property.Group> ;
+    ns1:name "associated campaigns" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#associated.campaigns> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#campaigns-associated.campaigns.citations> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:campaigns:associated campaigns citations" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#campaigns.Property.Group> ;
+    ns1:name "associated campaigns citations" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#associated.campaigns.citations> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#campaigns-contributors> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:campaigns:contributors" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#campaigns.Property.Group> ;
+    ns1:name "contributors" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#contributors> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#campaigns-created> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:campaigns:created" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#campaigns.Property.Group> ;
+    ns1:name "created" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#created> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#campaigns-description> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:campaigns:description" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#campaigns.Property.Group> ;
+    ns1:name "description" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#description> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#campaigns-last.modified> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:campaigns:last modified" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#campaigns.Property.Group> ;
+    ns1:name "last modified" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#last.modified> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#campaigns-name> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:campaigns:name" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#campaigns.Property.Group> ;
+    ns1:name "name" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#name> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#campaigns-relationship.citations> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:campaigns:relationship citations" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#campaigns.Property.Group> ;
+    ns1:name "relationship citations" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#relationship.citations> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#campaigns-url> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:campaigns:url" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#campaigns.Property.Group> ;
+    ns1:name "url" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#url> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#campaigns-version> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:campaigns:version" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#campaigns.Property.Group> ;
+    ns1:name "version" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#version> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#citations-citation> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:citations:citation" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#citations.Property.Group> ;
+    ns1:name "citation" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#citation> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#citations-reference> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:citations:reference" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#citations.Property.Group> ;
+    ns1:name "reference" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#reference> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#citations-url> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:citations:url" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#citations.Property.Group> ;
+    ns1:name "url" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#url> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#datasources-ID> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:datasources:ID" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#datasources.Property.Group> ;
+    ns1:name "ID" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#ID> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#datasources-collection.layers> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:datasources:collection layers" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#datasources.Property.Group> ;
+    ns1:name "collection layers" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#collection.layers> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#datasources-contributors> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:datasources:contributors" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#datasources.Property.Group> ;
+    ns1:name "contributors" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#contributors> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#datasources-created> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:datasources:created" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#datasources.Property.Group> ;
+    ns1:name "created" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#created> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#datasources-description> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:datasources:description" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#datasources.Property.Group> ;
+    ns1:name "description" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#description> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#datasources-modified> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:datasources:modified" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#datasources.Property.Group> ;
+    ns1:name "modified" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#modified> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#datasources-name> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:datasources:name" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#datasources.Property.Group> ;
+    ns1:name "name" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#name> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#datasources-platforms> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:datasources:platforms" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#datasources.Property.Group> ;
+    ns1:name "platforms" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#platforms> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#datasources-type> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:datasources:type" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#datasources.Property.Group> ;
+    ns1:name "type" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#type> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#datasources-url> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:datasources:url" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#datasources.Property.Group> ;
+    ns1:name "url" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#url> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#datasources-version> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:datasources:version" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#datasources.Property.Group> ;
+    ns1:name "version" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#version> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#groups-ID> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:groups:ID" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#groups.Property.Group> ;
+    ns1:name "ID" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#ID> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#groups-associated.groups> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:groups:associated groups" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#groups.Property.Group> ;
+    ns1:name "associated groups" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#associated.groups> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#groups-associated.groups.citations> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:groups:associated groups citations" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#groups.Property.Group> ;
+    ns1:name "associated groups citations" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#associated.groups.citations> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#groups-contributors> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:groups:contributors" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#groups.Property.Group> ;
+    ns1:name "contributors" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#contributors> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#groups-created> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:groups:created" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#groups.Property.Group> ;
+    ns1:name "created" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#created> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#groups-description> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:groups:description" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#groups.Property.Group> ;
+    ns1:name "description" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#description> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#groups-last.modified> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:groups:last modified" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#groups.Property.Group> ;
+    ns1:name "last modified" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#last.modified> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#groups-name> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:groups:name" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#groups.Property.Group> ;
+    ns1:name "name" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#name> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#groups-relationship.citations> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:groups:relationship citations" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#groups.Property.Group> ;
+    ns1:name "relationship citations" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#relationship.citations> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#groups-url> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:groups:url" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#groups.Property.Group> ;
+    ns1:name "url" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#url> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#groups-version> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:groups:version" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#groups.Property.Group> ;
+    ns1:name "version" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#version> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#mitigations-ID> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:mitigations:ID" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#mitigations.Property.Group> ;
+    ns1:name "ID" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#ID> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#mitigations-created> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:mitigations:created" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#mitigations.Property.Group> ;
+    ns1:name "created" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#created> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#mitigations-description> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:mitigations:description" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#mitigations.Property.Group> ;
+    ns1:name "description" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#description> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#mitigations-last.modified> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:mitigations:last modified" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#mitigations.Property.Group> ;
+    ns1:name "last modified" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#last.modified> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#mitigations-name> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:mitigations:name" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#mitigations.Property.Group> ;
+    ns1:name "name" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#name> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#mitigations-relationship.citations> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:mitigations:relationship citations" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#mitigations.Property.Group> ;
+    ns1:name "relationship citations" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#relationship.citations> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#mitigations-url> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:mitigations:url" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#mitigations.Property.Group> ;
+    ns1:name "url" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#url> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#mitigations-version> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:mitigations:version" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#mitigations.Property.Group> ;
+    ns1:name "version" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#version> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#relationships-mapping.description> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:relationships:mapping description" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#relationships.Property.Group> ;
+    ns1:name "mapping description" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#mapping.description> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#relationships-mapping.type> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:relationships:mapping type" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#relationships.Property.Group> ;
+    ns1:name "mapping type" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#mapping.type> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#relationships-source.ID> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:relationships:source ID" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#relationships.Property.Group> ;
+    ns1:name "source ID" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#source.ID> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#relationships-source.name> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:relationships:source name" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#relationships.Property.Group> ;
+    ns1:name "source name" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#source.name> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#relationships-source.type> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:relationships:source type" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#relationships.Property.Group> ;
+    ns1:name "source type" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#source.type> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#relationships-target.ID> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:relationships:target ID" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#relationships.Property.Group> ;
+    ns1:name "target ID" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#target.ID> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#relationships-target.name> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:relationships:target name" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#relationships.Property.Group> ;
+    ns1:name "target name" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#target.name> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#relationships-target.type> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:relationships:target type" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#relationships.Property.Group> ;
+    ns1:name "target type" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#target.type> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#software-ID> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:software:ID" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#software.Property.Group> ;
+    ns1:name "ID" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#ID> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#software-aliases> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:software:aliases" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#software.Property.Group> ;
+    ns1:name "aliases" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#aliases> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#software-contributors> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:software:contributors" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#software.Property.Group> ;
+    ns1:name "contributors" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#contributors> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#software-created> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:software:created" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#software.Property.Group> ;
+    ns1:name "created" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#created> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#software-description> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:software:description" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#software.Property.Group> ;
+    ns1:name "description" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#description> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#software-last.modified> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:software:last modified" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#software.Property.Group> ;
+    ns1:name "last modified" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#last.modified> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#software-name> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:software:name" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#software.Property.Group> ;
+    ns1:name "name" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#name> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#software-platforms> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:software:platforms" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#software.Property.Group> ;
+    ns1:name "platforms" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#platforms> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#software-relationship.citations> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:software:relationship citations" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#software.Property.Group> ;
+    ns1:name "relationship citations" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#relationship.citations> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#software-type> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:software:type" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#software.Property.Group> ;
+    ns1:name "type" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#type> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#software-url> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:software:url" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#software.Property.Group> ;
+    ns1:name "url" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#url> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#software-version> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:software:version" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#software.Property.Group> ;
+    ns1:name "version" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#version> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#tactics> a owl:Class,
+        ns1:NodeShape ;
+    rdfs:label "tactics" ;
+    rdfs:comment "Harvested from enterprise-attack-v12.1.xlsx:tactics" ;
+    rdfs:subClassOf <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#enterprise.attack.v12.1.xlsx> ;
+    ns1:property <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#tactics-ID>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#tactics-created>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#tactics-description>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#tactics-last.modified>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#tactics-name>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#tactics-url>,
+        <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#tactics-version> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#tactics-ID> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:tactics:ID" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#tactics.Property.Group> ;
+    ns1:name "ID" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#ID> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#tactics-created> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:tactics:created" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#tactics.Property.Group> ;
+    ns1:name "created" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#created> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#tactics-description> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:tactics:description" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#tactics.Property.Group> ;
+    ns1:name "description" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#description> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#tactics-last.modified> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:tactics:last modified" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#tactics.Property.Group> ;
+    ns1:name "last modified" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#last.modified> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#tactics-name> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:tactics:name" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#tactics.Property.Group> ;
+    ns1:name "name" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#name> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#tactics-url> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:tactics:url" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#tactics.Property.Group> ;
+    ns1:name "url" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#url> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#tactics-version> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:tactics:version" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#tactics.Property.Group> ;
+    ns1:name "version" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#version> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques-CAPEC.ID> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:techniques:CAPEC ID" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques.Property.Group> ;
+    ns1:name "CAPEC ID" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#CAPEC.ID> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques-ID> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:techniques:ID" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques.Property.Group> ;
+    ns1:name "ID" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#ID> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques-contributors> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:techniques:contributors" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques.Property.Group> ;
+    ns1:name "contributors" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#contributors> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques-created> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:techniques:created" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques.Property.Group> ;
+    ns1:name "created" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#created> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques-data.sources> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:techniques:data sources" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques.Property.Group> ;
+    ns1:name "data sources" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#data.sources> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques-defenses.bypassed> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:techniques:defenses bypassed" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques.Property.Group> ;
+    ns1:name "defenses bypassed" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#defenses.bypassed> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques-description> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:techniques:description" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques.Property.Group> ;
+    ns1:name "description" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#description> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques-detection> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:techniques:detection" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques.Property.Group> ;
+    ns1:name "detection" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#detection> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques-effective.permissions> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:techniques:effective permissions" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques.Property.Group> ;
+    ns1:name "effective permissions" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#effective.permissions> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques-impact.type> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:techniques:impact type" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques.Property.Group> ;
+    ns1:name "impact type" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#impact.type> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques-is.sub.technique> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:techniques:is sub-technique" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques.Property.Group> ;
+    ns1:name "is sub-technique" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#is.sub.technique> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques-last.modified> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:techniques:last modified" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques.Property.Group> ;
+    ns1:name "last modified" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#last.modified> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques-name> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:techniques:name" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques.Property.Group> ;
+    ns1:name "name" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#name> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques-permissions.required> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:techniques:permissions required" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques.Property.Group> ;
+    ns1:name "permissions required" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#permissions.required> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques-platforms> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:techniques:platforms" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques.Property.Group> ;
+    ns1:name "platforms" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#platforms> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques-relationship.citations> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:techniques:relationship citations" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques.Property.Group> ;
+    ns1:name "relationship citations" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#relationship.citations> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques-sub.technique.of> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:techniques:sub-technique of" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques.Property.Group> ;
+    ns1:name "sub-technique of" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#sub.technique.of> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques-supports.remote> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:techniques:supports remote" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques.Property.Group> ;
+    ns1:name "supports remote" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#supports.remote> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques-system.requirements> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:techniques:system requirements" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques.Property.Group> ;
+    ns1:name "system requirements" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#system.requirements> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques-tactics> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:techniques:tactics" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques.Property.Group> ;
+    ns1:name "tactics" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#tactics> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques-url> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:techniques:url" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques.Property.Group> ;
+    ns1:name "url" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#url> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques-version> a ns1:PropertyShape ;
+    ns1:datatype xsd:string ;
+    ns1:description "Harvested from enterprise-attack-v12.1.xlsx:techniques:version" ;
+    ns1:group <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques.Property.Group> ;
+    ns1:name "version" ;
+    ns1:path <https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#version> .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#citations.Property.Group> a ns1:PropertyGroup ;
+    rdfs:label "Harvested from enterprise-attack-v12.1.xlsx:citations",
+        "citations Property Group" .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#tactics.Property.Group> a ns1:PropertyGroup ;
+    rdfs:label "Harvested from enterprise-attack-v12.1.xlsx:tactics",
+        "tactics Property Group" .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#mitigations.Property.Group> a ns1:PropertyGroup ;
+    rdfs:label "Harvested from enterprise-attack-v12.1.xlsx:mitigations",
+        "mitigations Property Group" .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#relationships.Property.Group> a ns1:PropertyGroup ;
+    rdfs:label "Harvested from enterprise-attack-v12.1.xlsx:relationships",
+        "relationships Property Group" .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#enterprise.attack.v12.1.xlsx> a owl:Class,
+        ns1:NodeShape ;
+    rdfs:label "enterprise-attack-v12.1.xlsx" ;
+    rdfs:comment "Harvested from enterprise-attack-v12.1.xlsx" ;
+    rdfs:subClassOf owl:Thing .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#campaigns.Property.Group> a ns1:PropertyGroup ;
+    rdfs:label "Harvested from enterprise-attack-v12.1.xlsx:campaigns",
+        "campaigns Property Group" .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#datasources.Property.Group> a ns1:PropertyGroup ;
+    rdfs:label "Harvested from enterprise-attack-v12.1.xlsx:datasources",
+        "datasources Property Group" .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#groups.Property.Group> a ns1:PropertyGroup ;
+    rdfs:label "Harvested from enterprise-attack-v12.1.xlsx:groups",
+        "groups Property Group" .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#software.Property.Group> a ns1:PropertyGroup ;
+    rdfs:label "Harvested from enterprise-attack-v12.1.xlsx:software",
+        "software Property Group" .
+
+<https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#techniques.Property.Group> a ns1:PropertyGroup ;
+    rdfs:label "Harvested from enterprise-attack-v12.1.xlsx:techniques",
+        "techniques Property Group" .
+

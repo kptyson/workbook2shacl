@@ -1,0 +1,156 @@
+# baseURI: urn:x-evn-master:example_ontology
+# imports: http://datashapes.org/graphql
+
+@base          <urn:x-evn-master:example_ontology> .
+@prefix metadata: <http://topbraid.org/metadata#> .
+@prefix teamwork: <http://topbraid.org/teamwork#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix example_ontology: <https://www.industrialsemantics.com/ontologies/Example_Ontology#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<urn:x-evn-master:example_ontology>
+        <http://topbraid.org/swa#defaultNamespace>  "https://www.industrialsemantics.com/ontologies/Example_Ontology#" ;
+        rdfs:label       "Example Ontology" ;
+        rdf:type         owl:Ontology ;
+        owl:imports      <http://datashapes.org/graphql> ;
+        metadata:status  metadata:UnderDevelopmentStatus ;
+        rdfs:comment     "Example Ontology derived from an excel workbook containing multiple worksheets" .
+
+example_ontology:WorkbookClass
+        rdfs:label       "Workbook Class" ;
+        rdf:type         owl:Class ;
+        rdf:type         sh:NodeShape ;
+        rdfs:subClassOf  owl:Thing ;
+        rdfs:comment     "The parent class of all classes derived from the workbook" .
+
+example_ontology:Worksheet0Class
+        rdfs:label       "Worksheet 0 Class" ;
+        rdf:type         owl:Class ;
+        rdf:type         sh:NodeShape ;
+        rdfs:subClassOf  example_ontology:WorkbookClass ;
+        rdfs:comment     "The class derived from the first worksheet" ;
+        sh:property      example_ontology:Worksheet0Class-ColumnA ;
+        sh:property      example_ontology:Worksheet0Class-ColumnB ;
+        sh:property      example_ontology:Worksheet0Class-ColumnC .
+
+example_ontology:Worksheet1Class
+        rdfs:label       "Worksheet 1 Class" ;
+        rdf:type         owl:Class ;
+        rdf:type         sh:NodeShape ;
+        rdfs:subClassOf  example_ontology:WorkbookClass ;
+        rdfs:comment     "The class derived from the second worksheet" ;
+        sh:property      example_ontology:Worksheet1Class-ColumnA ;
+        sh:property      example_ontology:Worksheet1Class-ColumnB ;
+        sh:property      example_ontology:Worksheet1Class-ColumnC .
+
+example_ontology:Worksheet2Class
+        rdfs:label       "Worksheet 2 Class" ;
+        rdf:type         owl:Class ;
+        rdf:type         sh:NodeShape ;
+        rdfs:subClassOf  example_ontology:WorkbookClass ;
+        rdfs:comment     "The class derived from the third worksheet" ;
+        sh:property      example_ontology:Worksheet2Class-ColumnA ;
+        sh:property      example_ontology:Worksheet2Class-ColumnB ;
+        sh:property      example_ontology:Worksheet2Class-ColumnC .
+
+example_ontology:Worksheet0PropertyGroupPropertyGroup
+        rdfs:label    "Worksheet 0 Property Group" ;
+        rdf:type      sh:PropertyGroup ;
+        rdfs:comment  "The property group derived from the columns in the first worksheet" ;
+        sh:order      "0"^^xsd:decimal .
+
+example_ontology:Worksheet0Class-ColumnA
+        rdf:type        sh:PropertyShape ;
+        sh:path         example_ontology:ColumnA ;
+        sh:name         "Column A" ;
+        sh:datatype     xsd:string ;
+        sh:order        "0"^^xsd:decimal ;
+        sh:group        example_ontology:Worksheet0PropertyGroupPropertyGroup ;
+        sh:description  "The property derived from column A of the first worksheet" .
+
+example_ontology:Worksheet0Class-ColumnB
+        rdf:type     sh:PropertyShape ;
+        sh:path      example_ontology:ColumnB ;
+        sh:name      "Column B" ;
+        sh:maxCount  1 ;
+        sh:minCount  1 ;
+        sh:datatype  xsd:decimal ;
+        sh:order     "1"^^xsd:decimal ;
+        sh:group     example_ontology:Worksheet0PropertyGroupPropertyGroup .
+
+example_ontology:Worksheet0Class-ColumnC
+        rdf:type     sh:PropertyShape ;
+        sh:path      example_ontology:ColumnC ;
+        sh:name      "Column C" ;
+        sh:nodeKind  sh:Literal ;
+        sh:minCount  1 ;
+        sh:order     "2"^^xsd:decimal ;
+        sh:group     example_ontology:Worksheet0PropertyGroupPropertyGroup .
+
+example_ontology:Worksheet1PropertyGroupPropertyGroup
+        rdfs:label  "Worksheet 1 Property Group" ;
+        rdf:type    sh:PropertyGroup ;
+        sh:order    "0"^^xsd:decimal .
+
+example_ontology:Worksheet1Class-ColumnA
+        rdf:type     sh:PropertyShape ;
+        sh:path      example_ontology:ColumnA ;
+        sh:name      "Column A" ;
+        sh:maxCount  1 ;
+        sh:datatype  xsd:boolean ;
+        sh:order     "0"^^xsd:decimal ;
+        sh:group     example_ontology:Worksheet1PropertyGroupPropertyGroup .
+
+example_ontology:Worksheet1Class-ColumnB
+        rdf:type     sh:PropertyShape ;
+        sh:path      example_ontology:ColumnB ;
+        sh:name      "Column B" ;
+        sh:maxCount  1 ;
+        sh:datatype  xsd:decimal ;
+        sh:order     "1"^^xsd:decimal ;
+        sh:group     example_ontology:Worksheet1PropertyGroupPropertyGroup .
+
+example_ontology:Worksheet1Class-ColumnC
+        rdf:type     sh:PropertyShape ;
+        sh:path      example_ontology:ColumnC ;
+        sh:name      "Column C" ;
+        sh:datatype  xsd:duration ;
+        sh:order     "2"^^xsd:decimal ;
+        sh:group     example_ontology:Worksheet1PropertyGroupPropertyGroup .
+
+example_ontology:Worksheet2PropertyGroupPropertyGroup
+        rdfs:label  "Worksheet 2 Property Group" ;
+        rdf:type    sh:PropertyGroup ;
+        sh:order    "0"^^xsd:decimal .
+
+example_ontology:Worksheet2Class-ColumnA
+        rdf:type     sh:PropertyShape ;
+        sh:path      example_ontology:ColumnA ;
+        sh:name      "Column A" ;
+        sh:minCount  1 ;
+        sh:datatype  xsd:decimal ;
+        sh:order     "0"^^xsd:decimal ;
+        sh:group     example_ontology:Worksheet2PropertyGroupPropertyGroup .
+
+example_ontology:Worksheet2Class-ColumnB
+        rdf:type     sh:PropertyShape ;
+        sh:path      example_ontology:ColumnB ;
+        sh:name      "Column B" ;
+        sh:maxCount  1 ;
+        sh:minCount  1 ;
+        sh:datatype  xsd:ENTITY ;
+        sh:order     "1"^^xsd:decimal ;
+        sh:group     example_ontology:Worksheet2PropertyGroupPropertyGroup .
+
+example_ontology:Worksheet2Class-ColumnC
+        rdf:type     sh:PropertyShape ;
+        sh:path      example_ontology:ColumnC ;
+        sh:name      "Column C" ;
+        sh:maxCount  1 ;
+        sh:minCount  1 ;
+        sh:datatype  xsd:duration ;
+        sh:order     "2"^^xsd:decimal ;
+        sh:group     example_ontology:Worksheet2PropertyGroupPropertyGroup .

@@ -1,0 +1,18 @@
+# baseURI: urn:x-evn-master:att_ck_ontology
+# imports: http://datashapes.org/graphql
+
+@base          <urn:x-evn-master:att_ck_ontology> .
+@prefix metadata: <http://topbraid.org/metadata#> .
+@prefix teamwork: <http://topbraid.org/teamwork#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<urn:x-evn-master:att_ck_ontology>
+        <http://topbraid.org/swa#defaultNamespace>  "https://www.industrialsemantics.com/ontologies/ATT%26CK_Ontology#" ;
+        rdfs:label       "ATT&CK Ontology" ;
+        rdf:type         owl:Ontology ;
+        owl:imports      <http://datashapes.org/graphql> ;
+        metadata:status  metadata:UnderDevelopmentStatus ;
+        rdfs:comment     "Derived from ATT&CK in Excel\nExcel spreadsheets representing the ATT&CK dataset.\nhttps://attack.mitre.org/docs/enterprise-attack-v12.1/enterprise-attack-v12.1.xlsx\n" .

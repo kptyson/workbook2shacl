@@ -1,0 +1,15 @@
+from rdflib import Namespace
+
+arg_ns = Namespace('http://spinrdf.org/arg#')
+dash_ns = Namespace('http://datashapes.org/dash#')
+dc_ns = Namespace('http://purl.org/dc/elements/1.1/')
+dct_ns = Namespace('http://purl.org/dc/terms/')
+edg_ns = Namespace('http://edg.topbraid.solutions/model/')
+graphql_ns = Namespace('http://datashapes.org/graphql#')
+metadata_ns = Namespace('http://topbraid.org/metadata#')
+smf_ns = Namespace('http://topbraid.org/sparqlmotionfunctions#')
+spl_ns = Namespace('http://spinrdf.org/spl#')
+swa_ns = Namespace('http://topbraid.org/swa#')
+teamwork_ns = Namespace('http://topbraid.org/teamwork#')
+teamworkconstraints_ns = Namespace('http://topbraid.org/teamworkconstraints#')
+tosh_ns = Namespace('http://topbraid.org/tosh#')
